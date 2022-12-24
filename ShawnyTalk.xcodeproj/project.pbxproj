@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D163BFCF295595F600BDE27A /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D163BFCE295595F600BDE27A /* Color+.swift */; };
+		D163BFD12956B0AD00BDE27A /* CurrentUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D163BFD02956B0AD00BDE27A /* CurrentUserModel.swift */; };
+		D1687C1929559234000F6078 /* ShawnyTalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1687C1829559234000F6078 /* ShawnyTalkApp.swift */; };
+		D1687C1B29559234000F6078 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1687C1A29559234000F6078 /* ContentView.swift */; };
+		D1687C1D29559236000F6078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1687C1C29559236000F6078 /* Assets.xcassets */; };
+		D1687C2029559236000F6078 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1687C1F29559236000F6078 /* Preview Assets.xcassets */; };
+		D19D0E462956C9790013A147 /* GlobalGeometryGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E452956C9790013A147 /* GlobalGeometryGetter.swift */; };
+		D19D0E482956C9970013A147 /* TextFieldDynamicWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E472956C9970013A147 /* TextFieldDynamicWidth.swift */; };
+		D19D0E562956DC6B0013A147 /* ChatRoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E552956DC6B0013A147 /* ChatRoomListView.swift */; };
+		D19D0E592956DCE70013A147 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E582956DCE70013A147 /* MainView.swift */; };
+		D19D0E5C2956DD070013A147 /* FriendListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E5B2956DD070013A147 /* FriendListView.swift */; };
+		D19D0E5E2956DD200013A147 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E5D2956DD200013A147 /* ChatView.swift */; };
+		D19D0E612956DD420013A147 /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E602956DD420013A147 /* ShoppingView.swift */; };
+		D19D0E642956DD4B0013A147 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E632956DD4B0013A147 /* MoreView.swift */; };
+		D19D0E662956E6DD0013A147 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E652956E6DD0013A147 /* TopBarView.swift */; };
+		D19D0E68295739C90013A147 /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E67295739C90013A147 /* FriendService.swift */; };
+		D19D0E6A29573A170013A147 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E6929573A170013A147 /* FriendModel.swift */; };
+		D1D59EDF2955944400648D05 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D59EDE2955944400648D05 /* SigninView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D163BFCE295595F600BDE27A /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		D163BFD02956B0AD00BDE27A /* CurrentUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserModel.swift; sourceTree = "<group>"; };
+		D1687C1529559234000F6078 /* ShawnyTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShawnyTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1687C1829559234000F6078 /* ShawnyTalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShawnyTalkApp.swift; sourceTree = "<group>"; };
+		D1687C1A29559234000F6078 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D1687C1C29559236000F6078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1687C1F29559236000F6078 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D19D0E452956C9790013A147 /* GlobalGeometryGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGeometryGetter.swift; sourceTree = "<group>"; };
+		D19D0E472956C9970013A147 /* TextFieldDynamicWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDynamicWidth.swift; sourceTree = "<group>"; };
+		D19D0E4F2956CF490013A147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D19D0E552956DC6B0013A147 /* ChatRoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomListView.swift; sourceTree = "<group>"; };
+		D19D0E582956DCE70013A147 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D19D0E5B2956DD070013A147 /* FriendListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListView.swift; sourceTree = "<group>"; };
+		D19D0E5D2956DD200013A147 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		D19D0E602956DD420013A147 /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
+		D19D0E632956DD4B0013A147 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		D19D0E652956E6DD0013A147 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
+		D19D0E67295739C90013A147 /* FriendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
+		D19D0E6929573A170013A147 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
+		D1D59EDE2955944400648D05 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1687C1229559234000F6078 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1687C0C29559234000F6078 = {
+			isa = PBXGroup;
+			children = (
+				D1687C1729559234000F6078 /* ShawnyTalk */,
+				D1687C1629559234000F6078 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1687C1629559234000F6078 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1687C1529559234000F6078 /* ShawnyTalk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1687C1729559234000F6078 /* ShawnyTalk */ = {
+			isa = PBXGroup;
+			children = (
+				D19D0E4F2956CF490013A147 /* Info.plist */,
+				D1687C29295592AF000F6078 /* Model */,
+				D1687C28295592AA000F6078 /* Service */,
+				D1687C27295592A5000F6078 /* Extension */,
+				D1687C262955924E000F6078 /* View */,
+				D1687C1829559234000F6078 /* ShawnyTalkApp.swift */,
+				D1687C1A29559234000F6078 /* ContentView.swift */,
+				D1687C1C29559236000F6078 /* Assets.xcassets */,
+				D1687C1E29559236000F6078 /* Preview Content */,
+			);
+			path = ShawnyTalk;
+			sourceTree = "<group>";
+		};
+		D1687C1E29559236000F6078 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D1687C1F29559236000F6078 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D1687C262955924E000F6078 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D19D0E572956DCE10013A147 /* MainView */,
+				D19D0E532956DAD40013A147 /* Signin */,
+				D19D0E442956C96A0013A147 /* Utils */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1687C27295592A5000F6078 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D163BFCE295595F600BDE27A /* Color+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D1687C28295592AA000F6078 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D19D0E67295739C90013A147 /* FriendService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D1687C29295592AF000F6078 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D163BFD02956B0AD00BDE27A /* CurrentUserModel.swift */,
+				D19D0E6929573A170013A147 /* FriendModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D19D0E442956C96A0013A147 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D19D0E452956C9790013A147 /* GlobalGeometryGetter.swift */,
+				D19D0E472956C9970013A147 /* TextFieldDynamicWidth.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D19D0E532956DAD40013A147 /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				D1D59EDE2955944400648D05 /* SigninView.swift */,
+			);
+			path = Signin;
+			sourceTree = "<group>";
+		};
+		D19D0E542956DC570013A147 /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				D19D0E552956DC6B0013A147 /* ChatRoomListView.swift */,
+				D19D0E5D2956DD200013A147 /* ChatView.swift */,
+			);
+			path = ChatRoom;
+			sourceTree = "<group>";
+		};
+		D19D0E572956DCE10013A147 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				D19D0E622956DD440013A147 /* More */,
+				D19D0E5F2956DD3B0013A147 /* Shop */,
+				D19D0E5A2956DCFD0013A147 /* Friends */,
+				D19D0E542956DC570013A147 /* ChatRoom */,
+				D19D0E582956DCE70013A147 /* MainView.swift */,
+				D19D0E652956E6DD0013A147 /* TopBarView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		D19D0E5A2956DCFD0013A147 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				D19D0E5B2956DD070013A147 /* FriendListView.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		D19D0E5F2956DD3B0013A147 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				D19D0E602956DD420013A147 /* ShoppingView.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		D19D0E622956DD440013A147 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				D19D0E632956DD4B0013A147 /* MoreView.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1687C1429559234000F6078 /* ShawnyTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1687C2329559236000F6078 /* Build configuration list for PBXNativeTarget "ShawnyTalk" */;
+			buildPhases = (
+				D1687C1129559234000F6078 /* Sources */,
+				D1687C1229559234000F6078 /* Frameworks */,
+				D1687C1329559234000F6078 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShawnyTalk;
+			productName = ShawnyTalk;
+			productReference = D1687C1529559234000F6078 /* ShawnyTalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1687C0D29559234000F6078 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D1687C1429559234000F6078 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = D1687C1029559234000F6078 /* Build configuration list for PBXProject "ShawnyTalk" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1687C0C29559234000F6078;
+			productRefGroup = D1687C1629559234000F6078 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1687C1429559234000F6078 /* ShawnyTalk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1687C1329559234000F6078 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1687C2029559236000F6078 /* Preview Assets.xcassets in Resources */,
+				D1687C1D29559236000F6078 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1687C1129559234000F6078 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D163BFD12956B0AD00BDE27A /* CurrentUserModel.swift in Sources */,
+				D19D0E592956DCE70013A147 /* MainView.swift in Sources */,
+				D19D0E462956C9790013A147 /* GlobalGeometryGetter.swift in Sources */,
+				D19D0E642956DD4B0013A147 /* MoreView.swift in Sources */,
+				D19D0E662956E6DD0013A147 /* TopBarView.swift in Sources */,
+				D19D0E6A29573A170013A147 /* FriendModel.swift in Sources */,
+				D1687C1B29559234000F6078 /* ContentView.swift in Sources */,
+				D19D0E5E2956DD200013A147 /* ChatView.swift in Sources */,
+				D19D0E5C2956DD070013A147 /* FriendListView.swift in Sources */,
+				D163BFCF295595F600BDE27A /* Color+.swift in Sources */,
+				D1687C1929559234000F6078 /* ShawnyTalkApp.swift in Sources */,
+				D19D0E612956DD420013A147 /* ShoppingView.swift in Sources */,
+				D19D0E68295739C90013A147 /* FriendService.swift in Sources */,
+				D19D0E562956DC6B0013A147 /* ChatRoomListView.swift in Sources */,
+				D19D0E482956C9970013A147 /* TextFieldDynamicWidth.swift in Sources */,
+				D1D59EDF2955944400648D05 /* SigninView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D1687C2129559236000F6078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D1687C2229559236000F6078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1687C2429559236000F6078 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ShawnyTalk/Preview Content\"";
+				DEVELOPMENT_TEAM = JRXGXW25BG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShawnyTalk/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = shawnApp.ShawnyTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1687C2529559236000F6078 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ShawnyTalk/Preview Content\"";
+				DEVELOPMENT_TEAM = JRXGXW25BG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShawnyTalk/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = shawnApp.ShawnyTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1687C1029559234000F6078 /* Build configuration list for PBXProject "ShawnyTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1687C2129559236000F6078 /* Debug */,
+				D1687C2229559236000F6078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1687C2329559236000F6078 /* Build configuration list for PBXNativeTarget "ShawnyTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1687C2429559236000F6078 /* Debug */,
+				D1687C2529559236000F6078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1687C0D29559234000F6078 /* Project object */;
+}
