@@ -52,5 +52,7 @@ struct MainView_Previews: PreviewProvider {
         MainView()
             .environmentObject(CurrentUserModel.preview)
             .environmentObject(FriendService.preview)
+            .environmentObject(ChatService.preview)
+
     }
 }

@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct FriendListView: View {
-    @EnvironmentObject private var currentUserModel: CurrentUserModel
     @EnvironmentObject private var service: FriendService
     
     var body: some View {
         ScrollView {
             VStack {
-                MyView(imageUrl: $currentUserModel.profileImageUrl,
-                       displayName: $currentUserModel.displayName)
+                MyView()
                 
                 Color.gray
                     .frame(height: 1)
@@ -34,7 +32,8 @@ struct FriendListView: View {
 
             ForEach(service.friendList ?? []) { friendModel in
                 FriendView(imageUrl: friendModel.profileUrl,
-                           displayName: friendModel.displayName)
+                           displayName: friendModel.displayName,
+                           message: friendModel.message ?? "")
             }
         }
     }
@@ -42,33 +41,43 @@ struct FriendListView: View {
 
 struct FriendListView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendListView()
-            .environmentObject(CurrentUserModel.preview)
-            .environmentObject(FriendService.preview)
+        VStack {
+            FriendListView()
+        }
+        .environmentObject(CurrentUserModel.preview)
+        .environmentObject(FriendService.preview)
     }
 }
 
 struct MyView: View {
-    @Binding var imageUrl: String
-    @Binding var displayName: String
-    
+    @EnvironmentObject private var currentUserModel: CurrentUserModel
+
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: imageUrl)) { image in
+            AsyncImage(url: URL(string: currentUserModel.profileImageUrl)) { image in
                 image
                     .resizable()
                     .scaledToFill()
                     .frame(width: 45, height: 45)
-                    .border(Color.gray, width: 1)
                     .cornerRadius(13)
+                
 
             } placeholder: {
 
             }
 
-            Text(displayName)
-                .fontWeight(.semibold)
-                .padding(5)
+            VStack(alignment: .leading) {
+                Text(currentUserModel.displayName)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black.opacity(0.8))
+                
+                Text(currentUserModel.message ?? "")
+                    .font(.caption2)
+                    .foregroundColor(.gray)
+                    
+            }
+            .padding(5)
+
             
             Spacer()
             
@@ -81,24 +90,31 @@ struct MyView: View {
 struct FriendView: View {
     var imageUrl: String
     var displayName: String
+    var message: String
     
     var body: some View {
         HStack {
             AsyncImage(url: URL(string: imageUrl)) { image in
                 image
                     .resizable()
-                    .scaledToFill()
+                    .aspectRatio(contentMode: .fill)
                     .frame(width: 45, height: 45)
-                    .border(Color.gray, width: 1)
                     .cornerRadius(13)
 
             } placeholder: {
                 
             }
 
-            Text(displayName)
-                .fontWeight(.semibold)
-                .padding(5)
+            VStack(alignment: .leading) {
+                Text(displayName)
+                    .foregroundColor(.black.opacity(0.8))
+                
+                Text(message)
+                    .font(.caption2)
+                    .foregroundColor(.gray)
+            }
+            .padding(5)
+
             
             Spacer()
             

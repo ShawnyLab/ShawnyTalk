@@ -24,7 +24,7 @@ class FriendService: NSObject, ObservableObject {
     static var preview: FriendService {
         let service = FriendService(preview: true)
     
-        service.friendList = Array(repeating: FriendModel.preview, count: 30)
+        service.friendList = FriendModel.preview
         
         return service
     }

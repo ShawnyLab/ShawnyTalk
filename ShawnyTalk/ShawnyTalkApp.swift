@@ -6,9 +6,22 @@
 //
 
 import SwiftUI
+import FirebaseCore
+
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+
+    return true
+  }
+}
+
 
 @main
 struct ShawnyTalkApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     let userModel = CurrentUserModel()
     
     var body: some Scene {
@@ -17,6 +30,7 @@ struct ShawnyTalkApp: App {
                 .preferredColorScheme(.light)
                 .environmentObject(CurrentUserModel.preview)
                 .environmentObject(FriendService.preview)
+                .environmentObject(ChatService.preview)
         }
     }
 }

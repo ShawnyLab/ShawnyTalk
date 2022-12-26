@@ -24,6 +24,18 @@
 		D19D0E662956E6DD0013A147 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E652956E6DD0013A147 /* TopBarView.swift */; };
 		D19D0E68295739C90013A147 /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E67295739C90013A147 /* FriendService.swift */; };
 		D19D0E6A29573A170013A147 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E6929573A170013A147 /* FriendModel.swift */; };
+		D19D0E6C295861060013A147 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E6B295861060013A147 /* ChatService.swift */; };
+		D19D0E6E295861200013A147 /* ChatRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E6D295861200013A147 /* ChatRoomModel.swift */; };
+		D19D0E702958638E0013A147 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E6F2958638E0013A147 /* ChatModel.swift */; };
+		D19D0E7229598BB80013A147 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E7129598BB80013A147 /* String+Date.swift */; };
+		D19D0E762959C5600013A147 /* FriendService+Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E752959C5600013A147 /* FriendService+Api.swift */; };
+		D19D0E782959C5E30013A147 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D19D0E772959C5E30013A147 /* GoogleService-Info.plist */; };
+		D19D0E7B2959C68F0013A147 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D19D0E7A2959C68F0013A147 /* FirebaseAnalytics */; };
+		D19D0E7D2959C68F0013A147 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D19D0E7C2959C68F0013A147 /* FirebaseFirestore */; };
+		D19D0E7F2959C68F0013A147 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D19D0E7E2959C68F0013A147 /* FirebaseFirestoreCombine-Community */; };
+		D19D0E812959C68F0013A147 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D19D0E802959C68F0013A147 /* FirebaseFirestoreSwift */; };
+		D19D0E832959C68F0013A147 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D19D0E822959C68F0013A147 /* FirebaseStorage */; };
+		D19D0E852959C68F0013A147 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D19D0E842959C68F0013A147 /* FirebaseStorageCombine-Community */; };
 		D1D59EDF2955944400648D05 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D59EDE2955944400648D05 /* SigninView.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +59,12 @@
 		D19D0E652956E6DD0013A147 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		D19D0E67295739C90013A147 /* FriendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
 		D19D0E6929573A170013A147 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
+		D19D0E6B295861060013A147 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		D19D0E6D295861200013A147 /* ChatRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomModel.swift; sourceTree = "<group>"; };
+		D19D0E6F2958638E0013A147 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		D19D0E7129598BB80013A147 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
+		D19D0E752959C5600013A147 /* FriendService+Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendService+Api.swift"; sourceTree = "<group>"; };
+		D19D0E772959C5E30013A147 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1D59EDE2955944400648D05 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +73,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19D0E7F2959C68F0013A147 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				D19D0E7B2959C68F0013A147 /* FirebaseAnalytics in Frameworks */,
+				D19D0E7D2959C68F0013A147 /* FirebaseFirestore in Frameworks */,
+				D19D0E832959C68F0013A147 /* FirebaseStorage in Frameworks */,
+				D19D0E852959C68F0013A147 /* FirebaseStorageCombine-Community in Frameworks */,
+				D19D0E812959C68F0013A147 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +104,7 @@
 		D1687C1729559234000F6078 /* ShawnyTalk */ = {
 			isa = PBXGroup;
 			children = (
+				D19D0E772959C5E30013A147 /* GoogleService-Info.plist */,
 				D19D0E4F2956CF490013A147 /* Info.plist */,
 				D1687C29295592AF000F6078 /* Model */,
 				D1687C28295592AA000F6078 /* Service */,
@@ -115,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				D163BFCE295595F600BDE27A /* Color+.swift */,
+				D19D0E7129598BB80013A147 /* String+Date.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -122,7 +148,8 @@
 		D1687C28295592AA000F6078 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				D19D0E67295739C90013A147 /* FriendService.swift */,
+				D19D0E742959C5540013A147 /* Chat */,
+				D19D0E732959C54F0013A147 /* Friend */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -132,6 +159,8 @@
 			children = (
 				D163BFD02956B0AD00BDE27A /* CurrentUserModel.swift */,
 				D19D0E6929573A170013A147 /* FriendModel.swift */,
+				D19D0E6D295861200013A147 /* ChatRoomModel.swift */,
+				D19D0E6F2958638E0013A147 /* ChatModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +228,23 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		D19D0E732959C54F0013A147 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				D19D0E67295739C90013A147 /* FriendService.swift */,
+				D19D0E752959C5600013A147 /* FriendService+Api.swift */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		D19D0E742959C5540013A147 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				D19D0E6B295861060013A147 /* ChatService.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,6 +261,14 @@
 			dependencies = (
 			);
 			name = ShawnyTalk;
+			packageProductDependencies = (
+				D19D0E7A2959C68F0013A147 /* FirebaseAnalytics */,
+				D19D0E7C2959C68F0013A147 /* FirebaseFirestore */,
+				D19D0E7E2959C68F0013A147 /* FirebaseFirestoreCombine-Community */,
+				D19D0E802959C68F0013A147 /* FirebaseFirestoreSwift */,
+				D19D0E822959C68F0013A147 /* FirebaseStorage */,
+				D19D0E842959C68F0013A147 /* FirebaseStorageCombine-Community */,
+			);
 			productName = ShawnyTalk;
 			productReference = D1687C1529559234000F6078 /* ShawnyTalk.app */;
 			productType = "com.apple.product-type.application";
@@ -243,6 +297,9 @@
 				Base,
 			);
 			mainGroup = D1687C0C29559234000F6078;
+			packageReferences = (
+				D19D0E792959C68F0013A147 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D1687C1629559234000F6078 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +316,7 @@
 			files = (
 				D1687C2029559236000F6078 /* Preview Assets.xcassets in Resources */,
 				D1687C1D29559236000F6078 /* Assets.xcassets in Resources */,
+				D19D0E782959C5E30013A147 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,19 +327,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19D0E7229598BB80013A147 /* String+Date.swift in Sources */,
 				D163BFD12956B0AD00BDE27A /* CurrentUserModel.swift in Sources */,
 				D19D0E592956DCE70013A147 /* MainView.swift in Sources */,
+				D19D0E702958638E0013A147 /* ChatModel.swift in Sources */,
 				D19D0E462956C9790013A147 /* GlobalGeometryGetter.swift in Sources */,
 				D19D0E642956DD4B0013A147 /* MoreView.swift in Sources */,
 				D19D0E662956E6DD0013A147 /* TopBarView.swift in Sources */,
 				D19D0E6A29573A170013A147 /* FriendModel.swift in Sources */,
 				D1687C1B29559234000F6078 /* ContentView.swift in Sources */,
+				D19D0E6C295861060013A147 /* ChatService.swift in Sources */,
 				D19D0E5E2956DD200013A147 /* ChatView.swift in Sources */,
 				D19D0E5C2956DD070013A147 /* FriendListView.swift in Sources */,
 				D163BFCF295595F600BDE27A /* Color+.swift in Sources */,
+				D19D0E762959C5600013A147 /* FriendService+Api.swift in Sources */,
 				D1687C1929559234000F6078 /* ShawnyTalkApp.swift in Sources */,
 				D19D0E612956DD420013A147 /* ShoppingView.swift in Sources */,
 				D19D0E68295739C90013A147 /* FriendService.swift in Sources */,
+				D19D0E6E295861200013A147 /* ChatRoomModel.swift in Sources */,
 				D19D0E562956DC6B0013A147 /* ChatRoomListView.swift in Sources */,
 				D19D0E482956C9970013A147 /* TextFieldDynamicWidth.swift in Sources */,
 				D1D59EDF2955944400648D05 /* SigninView.swift in Sources */,
@@ -485,6 +548,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D19D0E792959C68F0013A147 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D19D0E7A2959C68F0013A147 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D19D0E792959C68F0013A147 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D19D0E7C2959C68F0013A147 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D19D0E792959C68F0013A147 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		D19D0E7E2959C68F0013A147 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D19D0E792959C68F0013A147 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		D19D0E802959C68F0013A147 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D19D0E792959C68F0013A147 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		D19D0E822959C68F0013A147 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D19D0E792959C68F0013A147 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		D19D0E842959C68F0013A147 /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D19D0E792959C68F0013A147 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D1687C0D29559234000F6078 /* Project object */;
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>966219642967-49pskb9pugtpn27t1e4sk80rul5lenug.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.966219642967-49pskb9pugtpn27t1e4sk80rul5lenug</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCfnClWrEQm-kPSEytQu97rBzy58DJWQR4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>966219642967</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>shawnApp.ShawnyTalk</string>
+	<key>PROJECT_ID</key>
+	<string>shawnytalk</string>
+	<key>STORAGE_BUCKET</key>
+	<string>shawnytalk.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:966219642967:ios:03db743c42078ed3fa8b12</string>
+</dict>
+</plist>

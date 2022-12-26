@@ -24,7 +24,6 @@ struct SigninView: View {
                             .font(.largeTitle)
                             .padding()
                         
-                        //Spacer 을 놔도 되겠지만~ Padding 으로 대체
                         Text("Shawny Talk")
                             .fontWeight(.bold)
                         
