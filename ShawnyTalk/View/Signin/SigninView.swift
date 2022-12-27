@@ -10,6 +10,8 @@ import SwiftUI
 struct SigninView: View {
     @EnvironmentObject private var currentUserModel: CurrentUserModel
     @EnvironmentObject private var friendService: FriendService
+    @EnvironmentObject private var chatService: ChatService
+    
     @FocusState private var isEditing
     @State private var showMainView = false
         
@@ -56,6 +58,7 @@ struct SigninView: View {
                     Task {
                         try await currentUserModel.fetch(uid: "myuid")
                         await friendService.fetchFriends()
+                        try await chatService.fetch()
 
                         showMainView.toggle()
                     }
@@ -77,6 +80,7 @@ struct SigninView_Previews: PreviewProvider {
         SigninView()
             .environmentObject(CurrentUserModel.preview)
             .environmentObject(FriendService.preview)
+            .environmentObject(ChatService.preview)
     }
 }
 

@@ -36,7 +36,6 @@
 		D19D0E812959C68F0013A147 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D19D0E802959C68F0013A147 /* FirebaseFirestoreSwift */; };
 		D19D0E832959C68F0013A147 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D19D0E822959C68F0013A147 /* FirebaseStorage */; };
 		D19D0E852959C68F0013A147 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D19D0E842959C68F0013A147 /* FirebaseStorageCombine-Community */; };
-		D19D0E872959CB930013A147 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E862959CB930013A147 /* FirestoreManager.swift */; };
 		D19D0E89295AD9900013A147 /* ChatService+Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E88295AD9900013A147 /* ChatService+Api.swift */; };
 		D19D0E8B295ADE7A0013A147 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D0E8A295ADE7A0013A147 /* ProfileView.swift */; };
 		D1D59EDF2955944400648D05 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D59EDE2955944400648D05 /* SigninView.swift */; };
@@ -68,7 +67,6 @@
 		D19D0E7129598BB80013A147 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		D19D0E752959C5600013A147 /* FriendService+Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FriendService+Api.swift"; sourceTree = "<group>"; };
 		D19D0E772959C5E30013A147 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D19D0E862959CB930013A147 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		D19D0E88295AD9900013A147 /* ChatService+Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatService+Api.swift"; sourceTree = "<group>"; };
 		D19D0E8A295ADE7A0013A147 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D1D59EDE2955944400648D05 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 			children = (
 				D19D0E742959C5540013A147 /* Chat */,
 				D19D0E732959C54F0013A147 /* Friend */,
-				D19D0E862959CB930013A147 /* FirestoreManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -359,7 +356,6 @@
 				D19D0E562956DC6B0013A147 /* ChatRoomListView.swift in Sources */,
 				D19D0E482956C9970013A147 /* TextFieldDynamicWidth.swift in Sources */,
 				D1D59EDF2955944400648D05 /* SigninView.swift in Sources */,
-				D19D0E872959CB930013A147 /* FirestoreManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

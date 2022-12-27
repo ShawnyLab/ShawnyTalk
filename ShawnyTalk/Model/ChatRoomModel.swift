@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 struct ChatRoomModel: Identifiable {
     
@@ -24,22 +25,53 @@ extension ChatRoomModel {
             return ChatRoomModel(uid: "\($0)", users: ["myuid", "friend\($0)"], chats: ChatModel.preview, isFixed: false)
         }
     }
+}
+
+struct SimpleChatRoomModel: Identifiable {
+    let id = UUID()
     
-    func getOtherUsers(friendList: [FriendModel], myUid: String) -> [FriendModel] {
-        var myFriends = users
-        if users.isEmpty { return [] }
+    let uid: String
+    let users: [String]
+    let type: RoomType
+    var lastMessage: LastMessageModel
     
-        myFriends.removeAll(where: { $0 == myUid })
-        return myFriends.map { friendId in
-            return friendList
-                .first { model in
-                    model.uid == friendId
-                }!
-        }
+    struct LastMessageModel {
+        var message: String
+        var createdAt: String
+    }
+    
+    static var preview: [SimpleChatRoomModel] {
+        let model = SimpleChatRoomModel(uid: "test",
+                                        users: ["friend1"],
+                                        type: .simple,
+                                        lastMessage: LastMessageModel(message: "hihi", createdAt: "hihi"))
+        
+        return [model]
     }
 }
 
-enum RoomType {
+extension SimpleChatRoomModel {
+    
+    init?(data: [String: Any], uid: String) {
+        guard let users = data["users"] as? [String],
+              let type = data["type"] as? String,
+              let lastMessage = data["lastMessage"] as? [String: Any] else {
+            return nil
+        }
+        self.users = users
+        self.type = RoomType(rawValue: type) ?? .simple
+        self.uid = uid
+        
+        self.lastMessage = LastMessageModel(message: lastMessage["message"] as! String, createdAt: lastMessage["createdAt"] as! String)
+        
+    }
+    
+    func getFriend(friendList: [FriendModel]) -> FriendModel {
+        return friendList.first(where: { $0.uid == users.first! })!
+    }
+}
+
+enum RoomType: String {
     case simple
     case group
 }

@@ -13,16 +13,12 @@ struct ChatRoomListView: View {
     @EnvironmentObject private var friendService: FriendService
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                ForEach(service.chatRoomList ?? []) { chatRoom in
-                    SimpleChatRoom(model: chatRoom,
-                                   friendModel: chatRoom.getOtherUsers(friendList: friendService.friendList ?? [], myUid: currentUserModel.uid).first!,
-                                   myUid: currentUserModel.uid)
-                }
+        ScrollView {
+            ForEach(service.chatRoomList) { chatRoom in
+                SimpleChatRoom(model: chatRoom,
+                               friendModel: chatRoom.getFriend(friendList: friendService.friendList),
+                               myUid: currentUserModel.uid)
             }
-            .navigationTitle("")
-            .navigationBarHidden(true)
         }
     }
 }
@@ -50,10 +46,11 @@ struct GroupChatRoom: View {
 }
 
 struct SimpleChatRoom: View {
-    let model: ChatRoomModel
+    let model: SimpleChatRoomModel
     let friendModel: FriendModel
     var myUid: String
     
+    @EnvironmentObject private var service: ChatService
     @State private var isPresented: Bool = false
      
 
@@ -77,7 +74,7 @@ struct SimpleChatRoom: View {
                 VStack(alignment: .leading) {
                     Text(friendModel.displayName)
                     
-                    Text(model.chats.last!.message)
+                    Text(model.lastMessage.message)
                         .font(.caption)
                         .foregroundColor(.gray)
                 }
@@ -85,7 +82,7 @@ struct SimpleChatRoom: View {
                 
                 Spacer()
                 
-                Text(model.chats.last!.createdAt.hourAndMinute)
+                Text(model.lastMessage.createdAt)
                     .font(.caption)
                     .foregroundColor(.gray)
                 
@@ -96,7 +93,7 @@ struct SimpleChatRoom: View {
         .padding(.horizontal, 20)
         .foregroundColor(.black.opacity(0.8))
         .fullScreenCover(isPresented: $isPresented) {
-            ChatView(friendModel: friendModel, chatRoomModel: model, isPresented: $isPresented)
+            ChatView(friendModel: friendModel, chats: $service.chats, isPresented: $isPresented)
         }
     }
 }

@@ -9,13 +9,46 @@ import FirebaseFirestore
 
 extension ChatService {
     
-    func fetch() async {
+    @MainActor
+    func fetch() async throws {
+        let db = Firestore.firestore()
+        let docRef = db.collection("users").document(CurrentUserModel.shared.uid).collection("chatRooms")
+        
+        do {
+            let dataSnapshot = try await docRef.getDocuments()
+            
+            for document in dataSnapshot.documents {
+                
+                if let model = SimpleChatRoomModel(data: document.data(), uid: document.documentID) {
+                    chatRoomList.append(model)
+                }
+            }
+            
+        } catch {
+            throw ApiError.invalidResponse
+        }
         
     }
     
-    func enterChatRoom(with friendId: String) {
+    func enterChatRoom(id: String) async throws {
         let db = Firestore.firestore()
-        let docRef = db.collection("users").document(friendId)
+        let docRef = db.collection("chatRooms").document(id).collection("chats")
+        var chats = [ChatModel]()
+        
+        do {
+            let snapshot = try await docRef.getDocuments()
+            
+            for document in snapshot.documents {
+                if let model = ChatModel(data: document.data(), key: document.documentID) {
+                    chats.append(model)
+                }
+            }
+            
+            self.chats = chats
+        } catch {
+            throw ApiError.invalidResponse
+        }
+        
     }
     
     func createChatRoom() {

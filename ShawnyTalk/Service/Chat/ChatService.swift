@@ -9,7 +9,8 @@ import Foundation
 
 class ChatService: NSObject, ObservableObject {
     
-    @Published var chatRoomList: [ChatRoomModel]?
+    @Published var chatRoomList: [SimpleChatRoomModel] = []
+    @Published var chats: [ChatModel] = []
     
     let isPreview: Bool
     
@@ -22,7 +23,8 @@ class ChatService: NSObject, ObservableObject {
     static var preview: ChatService {
         let service = ChatService(preview: true)
     
-        service.chatRoomList = ChatRoomModel.preview
+        service.chatRoomList = SimpleChatRoomModel.preview
+        service.chats = ChatModel.preview
         
         return service
     }
