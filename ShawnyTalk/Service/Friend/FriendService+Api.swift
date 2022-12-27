@@ -10,15 +10,19 @@ import Firebase
 extension FriendService {
     
     @MainActor
-    func fetchFriends(_ ids: [String]) async {
-                
+    func fetchFriends() async {
+        updating = true
+        print("fetching")
+        print(CurrentUserModel.shared.friends)
         do {
-            for id in ids {
+            for id in CurrentUserModel.shared.friends.map({ $0.key }) {
                 let friend = try await fetchUser(id: id)
                 if let friend { friendList.append(friend) }
             }
+            updating = false
         } catch {
             print("fetch friend error")
+            updating = false
         }
 
     }

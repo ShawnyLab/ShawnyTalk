@@ -27,3 +27,4 @@ class ChatService: NSObject, ObservableObject {
         return service
     }
 }
+

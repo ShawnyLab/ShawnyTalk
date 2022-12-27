@@ -22,7 +22,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct ShawnyTalkApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    let userModel = CurrentUserModel()
+    let userModel = CurrentUserModel.shared
     let friendService = FriendService()
     let chatService = ChatService()
     

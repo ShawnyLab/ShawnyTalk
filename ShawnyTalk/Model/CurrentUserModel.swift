@@ -9,18 +9,20 @@ import Foundation
 import FirebaseFirestore
 
 final class CurrentUserModel: NSObject, ObservableObject {
+    static let shared = CurrentUserModel()
     
     var uid: String
     @Published var registered: Bool = true
     @Published var displayName: String
     @Published var message: String?
     @Published var profileImageUrl: String
+    @Published var backgroundUrl: String?
     @Published var phoneNumber: String
     
     let isPreview: Bool
     var friends: [String: Bool] = [:]
     
-    init(preview: Bool = false) {
+    private init(preview: Bool = false) {
         uid = "myuid"
         displayName = ""
         registered = false
@@ -39,6 +41,7 @@ final class CurrentUserModel: NSObject, ObservableObject {
         model.profileImageUrl = "https://www.shutterstock.com/image-vector/abstract-vector-background-waves-3d-600w-569231599.jpg"
         model.phoneNumber = "01012341234"
         model.message = "iOS 개발자 shawn 입니다."
+        model.backgroundUrl = "https://image.shutterstock.com/image-photo/wooden-house-winter-forest-260nw-166718984.jpg"
         return model
     }
 
@@ -48,7 +51,7 @@ final class CurrentUserModel: NSObject, ObservableObject {
 extension CurrentUserModel {
 
     @MainActor
-    func fetch(uid: String) async throws -> [String] {
+    func fetch(uid: String) async throws {
         let db = Firestore.firestore()
         let docRef = db.collection("users").document(uid)
         
@@ -57,9 +60,10 @@ extension CurrentUserModel {
             guard let data = dataSnapshot.data() else {
                 throw ApiError.emptyData
             }
+            
+            print(data)
             update(data: data, uid: uid)
             
-            return self.friends.map { $0 .key }
         } catch {
             throw ApiError.invalidResponse
         }
@@ -76,6 +80,7 @@ extension CurrentUserModel {
         self.displayName = displayName
         self.profileImageUrl = profileImageUrl
         self.phoneNumber = phoneNumber
+        self.backgroundUrl = data["backgroundUrl"] as? String
         self.message = data["message"] as? String
         if let friends = data["friends"] as? [String: Bool] {
             self.friends = friends

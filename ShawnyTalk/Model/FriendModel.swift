@@ -11,9 +11,11 @@ struct FriendModel: Identifiable {
     var id = UUID()
     
     let uid: String
-    let profileUrl: String?
     let displayName: String
     let message: String?
+    let profileUrl: String?
+    let backgroundUrl: String?
+
     
     static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.id == rhs.id && lhs.uid == rhs.uid
@@ -29,6 +31,7 @@ extension FriendModel {
         self.displayName = displayName
         self.profileUrl = data["profileImageUrl"] as? String
         self.message = data["message"] as? String
+        self.backgroundUrl = data["backgroundUrl"] as? String
     }
 }
 
@@ -50,9 +53,10 @@ extension FriendModel {
     static var preview: [FriendModel] {
         return (1..<4).map {
             return FriendModel(uid: "friend\($0)",
-                               profileUrl: FriendModel.randomImages[$0],
                                displayName: "friend\($0)",
-                               message: "저는 shawn의 \($0)번째 친구에요.")
+                               message: "저는 shawn의 \($0)번째 친구에요.",
+                               profileUrl: FriendModel.randomImages[$0],
+                               backgroundUrl: nil)
         }
     }
 }

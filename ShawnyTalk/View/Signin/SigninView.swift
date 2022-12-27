@@ -20,6 +20,9 @@ struct SigninView: View {
                     .frame(height: reader.size.height+10)
 
                 ZStack {
+                    if friendService.updating {
+                        ProgressView()
+                    }
                     VStack {
                         Image(systemName: "message.fill")
                             .font(.largeTitle)
@@ -49,9 +52,11 @@ struct SigninView: View {
                 Color.sub1
                     .ignoresSafeArea()
                 Button("로그인") {
+                    friendService.updating = true
                     Task {
-                        let ids = try await currentUserModel.fetch(uid: "myuid")
-                        await friendService.fetchFriends(ids)
+                        try await currentUserModel.fetch(uid: "myuid")
+                        await friendService.fetchFriends()
+
                         showMainView.toggle()
                     }
                 }

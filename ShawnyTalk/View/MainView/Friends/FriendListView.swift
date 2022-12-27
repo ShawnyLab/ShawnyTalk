@@ -31,9 +31,7 @@ struct FriendListView: View {
             }
 
             ForEach(service.friendList) { friendModel in
-                FriendView(imageUrl: friendModel.profileUrl ?? "",
-                           displayName: friendModel.displayName,
-                           message: friendModel.message ?? "")
+                FriendView(model: friendModel)
             }
         }
     }
@@ -51,75 +49,91 @@ struct FriendListView_Previews: PreviewProvider {
 
 struct MyView: View {
     @EnvironmentObject private var currentUserModel: CurrentUserModel
+    @State var isPresented: Bool = false
 
     var body: some View {
-        HStack {
-            AsyncImage(url: URL(string: currentUserModel.profileImageUrl)) { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 45, height: 45)
-                    .cornerRadius(13)
-                
-
-            } placeholder: {
-
-            }
-
-            VStack(alignment: .leading) {
-                Text(currentUserModel.displayName)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.black.opacity(0.8))
-                
-                Text(currentUserModel.message ?? "")
-                    .font(.caption2)
-                    .foregroundColor(.gray)
+        Button {
+            isPresented.toggle()
+        } label: {
+            HStack {
+                AsyncImage(url: URL(string: currentUserModel.profileImageUrl)) { image in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 45, height: 45)
+                        .cornerRadius(13)
                     
-            }
-            .padding(5)
 
-            
-            Spacer()
-            
+                } placeholder: {
+
+                }
+
+                VStack(alignment: .leading) {
+                    Text(currentUserModel.displayName)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.black.opacity(0.8))
+                    
+                    Text(currentUserModel.message ?? "")
+                        .font(.caption2)
+                        .foregroundColor(.gray)
+                        
+                }
+                .padding(5)
+
+                
+                Spacer()
+                
+            }
+            .frame(height: 60)
+            .padding(.horizontal, 20)
         }
-        .frame(height: 60)
-        .padding(.horizontal, 20)
+        .fullScreenCover(isPresented: $isPresented) {
+            ProfileView(isPresented: $isPresented)
+        }
+
     }
 }
 
 struct FriendView: View {
-    var imageUrl: String
-    var displayName: String
-    var message: String
+    var model: FriendModel
+    
+    @State var isPresented: Bool = false
     
     var body: some View {
-        HStack {
-            AsyncImage(url: URL(string: imageUrl)) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 45, height: 45)
-                    .cornerRadius(13)
+        Button {
+            isPresented.toggle()
+        } label: {
+            HStack {
+                AsyncImage(url: URL(string: model.profileUrl ?? "")) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 45, height: 45)
+                        .cornerRadius(13)
 
-            } placeholder: {
+                } placeholder: {
+                    
+                }
+
+                VStack(alignment: .leading) {
+                    Text(model.displayName)
+                        .foregroundColor(.black.opacity(0.8))
+                    
+                    Text(model.message ?? "")
+                        .font(.caption2)
+                        .foregroundColor(.gray)
+                }
+                .padding(5)
+
+                
+                Spacer()
                 
             }
-
-            VStack(alignment: .leading) {
-                Text(displayName)
-                    .foregroundColor(.black.opacity(0.8))
-                
-                Text(message)
-                    .font(.caption2)
-                    .foregroundColor(.gray)
-            }
-            .padding(5)
-
-            
-            Spacer()
-            
+            .frame(height: 60)
+            .padding(.horizontal, 20)
         }
-        .frame(height: 60)
-        .padding(.horizontal, 20)
+        .fullScreenCover(isPresented: $isPresented) {
+            ProfileView(isPresented: $isPresented, friendModel: model)
+        }
     }
 }

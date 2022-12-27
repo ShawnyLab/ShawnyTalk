@@ -15,7 +15,7 @@ struct ChatRoomModel: Identifiable {
     let users: [String]
     let chats: [ChatModel]
     var isFixed: Bool
-    
+    var type: RoomType = .simple
 }
 
 extension ChatRoomModel {
@@ -37,4 +37,9 @@ extension ChatRoomModel {
                 }!
         }
     }
+}
+
+enum RoomType {
+    case simple
+    case group
 }
