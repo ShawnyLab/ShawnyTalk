@@ -6,20 +6,22 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 final class CurrentUserModel: NSObject, ObservableObject {
     
-    let uid: String
-    @Published var registered: Bool
+    var uid: String
+    @Published var registered: Bool = true
     @Published var displayName: String
     @Published var message: String?
     @Published var profileImageUrl: String
     @Published var phoneNumber: String
     
     let isPreview: Bool
+    var friends: [String: Bool] = [:]
     
     init(preview: Bool = false) {
-        uid = "me"
+        uid = "myuid"
         displayName = ""
         registered = false
         profileImageUrl = ""
@@ -38,6 +40,47 @@ final class CurrentUserModel: NSObject, ObservableObject {
         model.phoneNumber = "01012341234"
         model.message = "iOS 개발자 shawn 입니다."
         return model
+    }
+
+    
+}
+
+extension CurrentUserModel {
+
+    @MainActor
+    func fetch(uid: String) async throws -> [String] {
+        let db = Firestore.firestore()
+        let docRef = db.collection("users").document(uid)
+        
+        do {
+            let dataSnapshot = try await docRef.getDocument()
+            guard let data = dataSnapshot.data() else {
+                throw ApiError.emptyData
+            }
+            update(data: data, uid: uid)
+            
+            return self.friends.map { $0 .key }
+        } catch {
+            throw ApiError.invalidResponse
+        }
+    }
+    
+    private func update(data: [String: Any], uid: String) {
+        guard let displayName = data["displayName"] as? String,
+              let profileImageUrl = data["profileImageUrl"] as? String,
+              let phoneNumber = data["phoneNumber"] as? String else {
+            return
+        }
+        
+        self.uid = uid
+        self.displayName = displayName
+        self.profileImageUrl = profileImageUrl
+        self.phoneNumber = phoneNumber
+        self.message = data["message"] as? String
+        if let friends = data["friends"] as? [String: Bool] {
+            self.friends = friends
+        }
+        
     }
     
 }

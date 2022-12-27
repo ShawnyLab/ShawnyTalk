@@ -19,7 +19,7 @@ struct FriendListView: View {
                     .frame(height: 1)
                 
                 HStack {
-                    Text("친구 \(service.friendList?.count ?? 0)")
+                    Text("친구 \(service.friendList.count)")
                         .font(.caption)
                         .padding(.top, 10)
                         
@@ -30,8 +30,8 @@ struct FriendListView: View {
 
             }
 
-            ForEach(service.friendList ?? []) { friendModel in
-                FriendView(imageUrl: friendModel.profileUrl,
+            ForEach(service.friendList) { friendModel in
+                FriendView(imageUrl: friendModel.profileUrl ?? "",
                            displayName: friendModel.displayName,
                            message: friendModel.message ?? "")
             }

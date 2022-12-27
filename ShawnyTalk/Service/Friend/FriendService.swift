@@ -9,7 +9,7 @@ import Foundation
 
 class FriendService: NSObject, ObservableObject {
     
-    @Published var friendList: [FriendModel]?
+    @Published var friendList: [FriendModel] = []
     @Published var updating: Bool
     
     let isPreview: Bool

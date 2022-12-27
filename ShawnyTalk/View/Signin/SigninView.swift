@@ -9,13 +9,14 @@ import SwiftUI
 
 struct SigninView: View {
     @EnvironmentObject private var currentUserModel: CurrentUserModel
+    @EnvironmentObject private var friendService: FriendService
     @FocusState private var isEditing
     @State private var showMainView = false
         
     var body: some View {
         VStack {
             GeometryReader { reader in
-                Color.main.ignoresSafeArea()
+                Color.sub2.ignoresSafeArea()
                     .frame(height: reader.size.height+10)
 
                 ZStack {
@@ -28,7 +29,7 @@ struct SigninView: View {
                             .fontWeight(.bold)
                         
                         ZStack {
-                            Color.sub3
+                            Color.main
                             TextField("전화번호를 입력하세요", text: $currentUserModel.phoneNumber)
                                 .padding(.horizontal)
                                 .focused($isEditing)
@@ -45,14 +46,19 @@ struct SigninView: View {
             }
             
             ZStack {
-                Color.sub2
+                Color.sub1
                     .ignoresSafeArea()
                 Button("로그인") {
-                    showMainView.toggle()
+                    Task {
+                        let ids = try await currentUserModel.fetch(uid: "myuid")
+                        await friendService.fetchFriends(ids)
+                        showMainView.toggle()
+                    }
                 }
                 .fullScreenCover(isPresented: $showMainView) {
                     MainView()
                 }
+                .foregroundColor(.sub3)
             }
             .frame(height: 60)
         }

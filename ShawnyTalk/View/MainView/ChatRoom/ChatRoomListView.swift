@@ -63,7 +63,7 @@ struct SimpleChatRoom: View {
         } label: {
             HStack {
                 
-                AsyncImage(url: URL(string: friendModel.profileUrl)) { image in
+                AsyncImage(url: URL(string: friendModel.profileUrl ?? "")) { image in
                     image
                         .resizable()
                         .scaledToFill()

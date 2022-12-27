@@ -20,8 +20,8 @@ struct ChatRoomModel: Identifiable {
 
 extension ChatRoomModel {
     static var preview: [ChatRoomModel] {
-        return (0..<10).map {
-            return ChatRoomModel(uid: "\($0)", users: ["me", "friend\($0)"], chats: ChatModel.preview, isFixed: false)
+        return (1..<4).map {
+            return ChatRoomModel(uid: "\($0)", users: ["myuid", "friend\($0)"], chats: ChatModel.preview, isFixed: false)
         }
     }
     

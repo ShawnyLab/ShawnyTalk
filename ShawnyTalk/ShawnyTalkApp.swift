@@ -23,14 +23,16 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct ShawnyTalkApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     let userModel = CurrentUserModel()
+    let friendService = FriendService()
+    let chatService = ChatService()
     
     var body: some Scene {
         WindowGroup {
             SigninView()
                 .preferredColorScheme(.light)
-                .environmentObject(CurrentUserModel.preview)
-                .environmentObject(FriendService.preview)
-                .environmentObject(ChatService.preview)
+                .environmentObject(userModel)
+                .environmentObject(friendService)
+                .environmentObject(chatService)
         }
     }
 }
